@@ -1,0 +1,18 @@
+<h1>listdata</h1>
+<li><%= name %></li>
+<li><%= email %></li>
+
+<a href="/admin/">Login</a>
+<form action="/edit/:id" method="POST">
+<div>
+<label for ="name">name</label>
+<input type="text" id="name" name="name"  value="<%=page.name%>"required>
+</div>
+<div>
+<label for ="email">email</label>
+<input type="text" id="email" name="email"  value="<%=page.email%>"  required>
+</div>
+<div>
+<button type="submit">register</button>
+</div>
+</form>

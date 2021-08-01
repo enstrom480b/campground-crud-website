@@ -1,0 +1,18 @@
+<h1>listdata</h1>
+<li><%= name %></li>
+<li><%= weight%></li>
+
+<a href="/admin/">main page</a>
+<form action="/admin/editdata/:id" method="POST">
+<div>
+<label for ="name">name</label>
+<input type="text" id="name" name="name"  value="<%=name%>"required>
+</div>
+<div>
+<label for ="weight">weight</label>
+<input type="text" id="email" name="email"  value="<%=weight%>"  required>
+</div>
+<div>
+<input type="submit">edit button</input>
+</div>
+</form>

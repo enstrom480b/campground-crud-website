@@ -1,0 +1,46 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Content-Security-Policy" content="default-src *;
+      img-src'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+      style-src  'self' 'unsafe-inline' *">
+      <title>Karen Campsites</title>
+      <%-include('navbar')%>
+      <div class="container">
+
+      <header class="jumbotron">
+          <h1>This is karen campsite</h1>
+		  <p>view all campsites in karens most beautiful neighbourhood</p>
+		  <p><a class="btn btn-primary btn-large" href="/campgrounds/new">Add a new Campsite</a></p>
+      </header>
+    </div>
+  </head>
+  <section class="container">
+  <body>
+    <%-include('header')%> 
+    <div class="row">
+         <div class="col-lg-5">
+             <h2>Our Most Popular Campsites</h2>
+         </div>
+    </div>
+	<div class="row">
+        
+<% campgrounds.forEach(function(camp){ %>
+<div class="col-md-3 col-sm-6">
+<caption>
+<h4 style="text-align:center"><%= camp.name %></h4>
+</caption>
+<div class="thumbnail">
+<img style="border:1px solid wheat;width:300px;height:250px" src='<%= camp.image %>'>
+</div>
+<p><a href="/campground/<%= camp._id%>"class="btn btn-primary">more info</a></p>
+</div>
+<% }); %>
+</div>
+<%-include('footer')%> 
+  </section>
+  </body>
+
+  </html> 

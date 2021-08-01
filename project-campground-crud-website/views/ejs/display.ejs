@@ -1,0 +1,8 @@
+<h1>display data</h1>
+<%page.forEach(function(pages){%>
+<a href="/admin/edit/<%=pages._id%>">edit</a>
+<h2><%=pages.user%>users</h2>
+<h2><%=pages.name%>name</h2>
+<h2><%=pages.password%>password</h2>
+<%})%>
+<a href="/login">Login</a>

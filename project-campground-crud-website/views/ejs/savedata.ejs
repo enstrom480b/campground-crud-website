@@ -1,0 +1,33 @@
+<h1>savedata</h1>
+<h1>errors display </h1>
+<%if(err!='undefined'){%>
+
+<%err.forEach(function(pages){%>
+<li><%=pages%></li>
+<%})}%>
+
+<a href="/admin">Login</a>
+
+
+<a href="/admin/">main page</a>
+<form action="/admin/savedata/" method="POST" autocomplete="off">
+<div>
+<label for="name">name</label>
+<input type="text" id="name" name="name" >
+</div>
+<div>
+<label for="weight">weight</label>
+<input type="text" id="email" name="email" >
+</div>
+<div>
+<label for="weight">password</label>
+<input type="text" id="password" name="password1" >
+</div>
+<div>
+<label for="weight">password</label>
+<input type="text" id="email" name="password2" value="<% typeof name!='undefined' ? name:''%>">
+</div>
+<div>
+<input type="submit">edit button</input>
+</div>
+</form>
